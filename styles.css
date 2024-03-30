@@ -2,61 +2,85 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #9bf0d1;
-    background-image: url('https://i.postimg.cc/kXz0Km0S/background.jpg');
-    background-size: 50%; 
-    background-position: center; 
+    
 }
 
 header {
-    background-color: #f4a3d9;
-    color: #f63e44;
+    background-color: #f1f77b;
+    color: #ed0f0f(0, 22%, 91%, 0);
     text-align: center;
     padding: 20px 0;
 }
 
-.watermark {
-    font-size: 12px;
-    text-align: center;
-}
-
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(230, 241, 184, 0.912);
+    background-color: #f0ebeb;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
 }
 
-.input-section {
-    margin-bottom: 20px;
+.rewards, .chart, .redemption {
+    flex: 1;
+    padding: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.rewards h2, .chart h2, .redemption h2 {
+    margin-top: 0;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 10px;
+.rewards ul, .redemption ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rewards ul li {
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
+.rewards ul li .points {
+    margin-right: 10px;
+}
+
+.redemption ul li {
+    margin-bottom: 10px;
     cursor: pointer;
+    color: #007bff;
 }
 
-button:hover {
-    background-color: #0056b3;
+.redemption ul li:hover {
+    text-decoration: underline;
 }
 
-#output {
-    text-align: center;
-    font-size: 18px;
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
 }
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.footer-image {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.footer-image img {
+    max-width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+
